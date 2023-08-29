@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 
 import { connectDB } from './connect-db';
-import { AsyncDependenciesBlock } from 'webpack';
+import './initialize-db';
 
 let port = 8888;
 let app = express();
