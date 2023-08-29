@@ -17,7 +17,7 @@ app.use(
   cors(),
 );
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.send('Hello World!!'));
 
 export const addNewTask = async (task) => {
   let db = await connectDB();
@@ -63,6 +63,6 @@ app.post('/tasks/new', async (req, res) => {
 
 app.post('/tasks/update', async (req, res) => {
   let task = req.body.task;
-  await addNewTask(task);
+  await updateTask(task);
   res.status(200).send(); // * 200 OK
 });
